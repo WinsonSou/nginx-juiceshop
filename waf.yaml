@@ -1,0 +1,13 @@
+apiVersion: k8s.nginx.org/v1
+kind: Policy
+metadata:
+  name: waf-policy
+  namespace: juice
+spec:
+  waf:
+    enable: true
+    apPolicy: "juice/dataguard-alarm"
+    securityLogs:
+    - enable: true
+      apLogConf: "juice/logconf"
+      logDest: "syslog:server=syslog-svc.default:514"
