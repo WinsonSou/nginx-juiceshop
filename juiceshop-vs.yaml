@@ -7,8 +7,8 @@ spec:
   host: juiceshop.example.com
   tls:
     secret: juice-secret
-  policies:
-  - name: waf-policy # App Protect Demo
+#  policies:
+#  - name: waf-policy # App Protect Demo
   upstreams:
   - name: juiceshop
     service: juiceshop-svc
